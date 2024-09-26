@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="checkbox" name="" id="checkbox">
+    <button id="button">toggle checkbox</button>
+    <p id="para"></p>
+
+    <script>
+        const checkbox = document.getElementById('checkbox')
+        const button = document.getElementById('button')
+        const p = document.getElementById('para')
+        button.addEventListener('click', function(event){
+            checkbox.checked = !checkbox.checked
+            if(checkbox.checked){
+                p.innerHTML = 'button clicked'
+            } else {
+                p.innerHTML = 'button unclicked'
+            }
+        })
+    </script>
+</body>
+</html>

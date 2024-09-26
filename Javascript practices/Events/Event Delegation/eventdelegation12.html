@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            color: yellow;
+            background-color: black;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="cards">
+        <div class="card"><button>Like</button></div>
+        <div class="card"><button>Share</button></div>
+    </div>
+
+
+    <script>
+
+        document.getElementById('cards').addEventListener('click', function(event){
+            if(event.target && event.target.nodeName === 'BUTTON'){
+                console.log(`Card Button clicked: ${event.target.textContent}`);
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .active{
+            color: yellow;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table id="table">
+        <tr>
+            <td>Row 1</td>
+            <td>Row 2</td>
+            <td>Row 3</td>
+        </tr>
+    </table>
+
+
+    <script>
+
+        document.getElementById('table').addEventListener('mouseover', function(event) {
+            if(event.target && event.target.nodeName === 'TD'){
+                event.target.setAttribute('title', `Hovered on : ${event.target.textContent}`)
+            }
+        })
+
+    </script>
+</body>
+
+</html>

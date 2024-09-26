@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .active{
+            color: yellow;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="checkboxGroup">
+        <input type="checkbox"  id="option1"> Option 1
+        <input type="checkbox"  id="option2"> Option 2
+    </div>
+
+
+    <script>
+
+        document.getElementById('checkboxGroup').addEventListener('change', function (event){
+            if(event.target && event.target.type === 'checkbox') {
+                console.log(`${event.target.id} Checkbox has changed : ${event.target.checked}`);
+            }
+        })
+
+    </script>
+</body>
+
+</html>

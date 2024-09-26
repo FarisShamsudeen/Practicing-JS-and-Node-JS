@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .active{
+            color: yellow;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="my-list">
+        <li>Shamsudeen </li><br>
+        <li>Faseela </li><br>
+        <li>Faris </li><br>
+        <li>Shifana </li><br>
+        <li>Fathima </li><br>
+        <li>Farhana </li>
+    </ul>
+
+    <!-- <div id="form">
+        <button type="button">Submit</button>
+        <button type="button">Cancel</button>
+    </div> -->
+
+
+    <script>
+
+        document.getElementById('my-list').addEventListener('click', function (event){
+            if(event.target && event.target.nodeName === 'LI'){
+                event.target.classList.toggle('active')
+                console.log(`Toggled active class for: ${event.target.textContent}`);
+            }
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        .active{
+            color: yellow;
+            background-color: black;
+        }
+    </style> -->
+</head>
+
+<body>
+
+    <nav id="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- <ul id="my-list">
+        <li>Shamsudeen </li><br>
+        <li>Faseela </li><br>
+        <li>Faris </li><br>
+        <li>Shifana </li><br>
+        <li>Fathima </li><br>
+        <li>Farhana </li>
+    </ul> -->
+
+    <!-- <div id="form">
+        <button type="button">Submit</button>
+        <button type="button">Cancel</button>
+    </div> -->
+
+
+    <script>
+
+        document.getElementById('nav').addEventListener('click', function(event){
+            if(event.target && event.target.tagName === 'A'){
+                console.log(`Link Clicked: ${event.target.href}`);
+            }
+        })
+
+    </script>
+</body>
+
+</html>

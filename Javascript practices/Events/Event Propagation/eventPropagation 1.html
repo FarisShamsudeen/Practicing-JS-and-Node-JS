@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="parent" style="background-color: red;">
+        <button id="child">Click me</button>
+    </div>
+    <script>
+        const child = document.getElementById('child')
+        const parent = document.getElementById('parent')
+
+        parent.addEventListener('click', (event) => {
+            console.log(`Parent clicked`)
+        })
+
+        child.addEventListener('click', (event) => {
+            console.log(`child clicked`)
+            event.stopPropagation()
+        })
+
+    </script>
+
+<!-- 
+Event Delegation
+
+Event delegation is a technique where you attach an event listener to a parent element instead of to each individual child element. When the event occurs on a child element, it bubbles up to the parent, triggering the event listener. This can improve performance, especially when dealing with a large number of elements.
+
+Are they the same or related?
+
+Event propagation and event delegation are related concepts. Event delegation relies on event propagation to work. When an event occurs on a child element, it propagates up to the parent, where the delegated event listener is attached. -->
+
+
+</body>
+
+</html>
